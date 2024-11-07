@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتب العقار</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>مكتب [اسم المكتب] العقاري</h1>
+        <p>مرحبًا بكم في مكتبنا، حيث نقدم أفضل الخدمات العقارية.</p>
+    </header>
+
+    <section id="clients">
+        <h2>بيانات العملاء</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>اسم العميل</th>
+                    <th>نوع العقار</th>
+                    <th>العرض/الطلب</th>
+                    <th>التفاصيل</th>
+                </tr>
+            </thead>
+            <tbody id="client-list">
+                <!-- سيتم إدراج بيانات العملاء هنا -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="property-form">
+        <h2>إضافة بيانات عقار</h2>
+        <form id="propertyForm">
+            <label for="clientName">اسم العميل:</label>
+            <input type="text" id="clientName" required>
+
+            <label for="propertyType">نوع العقار:</label>
+            <input type="text" id="propertyType" required>
+
+            <label for="transactionType">العرض/الطلب:</label>
+            <select id="transactionType" required>
+                <option value="عرض">عرض</option>
+                <option value="طلب">طلب</option>
+            </select>
+
+            <label for="details">التفاصيل:</label>
+            <textarea id="details" required></textarea>
+
+            <button type="submit">إضافة العقار</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

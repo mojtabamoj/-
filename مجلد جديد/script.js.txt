@@ -1,0 +1,19 @@
+document.getElementById('propertyForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const clientName = document.getElementById('clientName').value;
+    const propertyType = document.getElementById('propertyType').value;
+    const transactionType = document.getElementById('transactionType').value;
+    const details = document.getElementById('details').value;
+
+    const table = document.getElementById('client-list');
+    const row = table.insertRow();
+
+    row.insertCell(0).textContent = clientName;
+    row.insertCell(1).textContent = propertyType;
+    row.insertCell(2).textContent = transactionType;
+    row.insertCell(3).textContent = details;
+
+    // إعادة تعيين النموذج بعد الإدخال
+    document.getElementById('propertyForm').reset();
+});
